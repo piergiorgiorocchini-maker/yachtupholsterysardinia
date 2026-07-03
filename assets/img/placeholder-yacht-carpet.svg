@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Yacht carpet placeholder">
+  <rect width="1200" height="800" fill="#0c2338"/>
+  <path d="M0 610 C210 505, 385 700, 585 575 C770 460, 920 555, 1200 430" fill="none" stroke="#c9a55a" stroke-width="5" opacity="0.56"/>
+  <rect x="150" y="210" width="900" height="360" rx="38" fill="#efe6d2"/>
+  <path d="M215 300 H985 M215 390 H985 M215 480 H985" stroke="#071827" stroke-width="5" opacity="0.15"/>
+  <circle cx="930" cy="235" r="88" fill="none" stroke="#1f6f78" stroke-width="8" opacity="0.45"/>
+  <text x="150" y="660" fill="#fbf7ef" font-family="Arial, sans-serif" font-size="44" font-weight="700">Yacht Carpet</text>
+  <text x="150" y="714" fill="#cce8e5" font-family="Arial, sans-serif" font-size="26">Image placeholder</text>
+</svg>

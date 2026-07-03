@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Yacht upholstery placeholder">
+  <rect width="1200" height="800" fill="#071827"/>
+  <circle cx="960" cy="170" r="180" fill="none" stroke="#c9a55a" stroke-width="3" opacity="0.42"/>
+  <circle cx="960" cy="170" r="122" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.18"/>
+  <path d="M160 500 C275 390, 435 390, 550 500 C650 595, 820 585, 940 480" fill="none" stroke="#cce8e5" stroke-width="10" stroke-linecap="round"/>
+  <rect x="150" y="250" width="500" height="210" rx="34" fill="#fbf7ef" opacity="0.92"/>
+  <rect x="195" y="302" width="410" height="52" rx="20" fill="#0c2338" opacity="0.22"/>
+  <rect x="220" y="380" width="360" height="38" rx="19" fill="#c9a55a" opacity="0.45"/>
+  <text x="150" y="620" fill="#fbf7ef" font-family="Arial, sans-serif" font-size="44" font-weight="700">Yacht Upholstery</text>
+  <text x="150" y="674" fill="#cce8e5" font-family="Arial, sans-serif" font-size="26">Image placeholder</text>
+</svg>

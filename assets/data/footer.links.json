@@ -1,0 +1,87 @@
+{
+  "brand": {
+    "name": "Yacht Upholstery Sardinia",
+    "subtitle": "by NuvolaCleaning",
+    "description": "Specialist yacht upholstery, carpet and mattress cleaning in Sardinia for guest-ready yacht interiors, villas and premium properties.",
+    "copyright": "© 2026 Yacht Upholstery Sardinia. All rights reserved."
+  },
+  "contacts": {
+    "phone_label": "+39 351 655 0908",
+    "phone_href": "tel:+393516550908",
+    "whatsapp_label": "WhatsApp assessment",
+    "whatsapp_href": "https://wa.me/393516550908?text=Hello%2C%20I%20would%20like%20a%20yacht%20interior%20textile%20care%20assessment%20in%20Sardinia.",
+    "email_label": "lanuvolazzurra@gmail.com",
+    "email_href": "mailto:lanuvolazzurra@gmail.com"
+  },
+  "columns": [
+    {
+      "title": "Services",
+      "links": [
+        {
+          "label": "Yacht upholstery cleaning",
+          "href": "/"
+        },
+        {
+          "label": "Yacht carpet cleaning",
+          "href": "/services/yacht-carpet-cleaning-sardinia.html"
+        },
+        {
+          "label": "Yacht mattress cleaning",
+          "href": "/services/yacht-mattress-cleaning-sardinia.html"
+        }
+      ]
+    },
+    {
+      "title": "Guides",
+      "links": [
+        {
+          "label": "Pre-charter yacht interiors",
+          "href": "/guides/pre-charter-yacht-interior-cleaning-sardinia.html"
+        },
+        {
+          "label": "Yacht upholstery in Porto Cervo",
+          "href": "/guides/yacht-upholstery-cleaning-porto-cervo.html"
+        },
+        {
+          "label": "Yacht carpet cleaning Costa Smeralda",
+          "href": "/guides/yacht-carpet-cleaning-costa-smeralda.html"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "Who We Are",
+          "href": "/pages/who-we-are.html"
+        },
+        {
+          "label": "Contact",
+          "href": "/pages/legal/contact.html"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/pages/legal/privacy.html"
+        },
+        {
+          "label": "Cookie Policy",
+          "href": "/pages/legal/cookie-policy.html"
+        },
+        {
+          "label": "Terms",
+          "href": "/pages/legal/terms.html"
+        }
+      ]
+    }
+  ],
+  "bottom_links": [
+    {
+      "label": "NuvolaCleaning",
+      "href": "https://nuvolacleaning.com/"
+    },
+    {
+      "label": "Yacht Upholstery Sardinia",
+      "href": "/"
+    }
+  ]
+}

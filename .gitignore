@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# backups
+*.backup*
+*backup*
+*before-local-pages*
+
+# temporary files
+*.tmp
+*.log
+
+# zip/packages
+*.zip
+
+# editor/system
+.vscode/
+.idea/

@@ -1,0 +1,76 @@
+{
+  "site": {
+    "domain": "yachtupholsterysardinia.com",
+    "environment": "production"
+  },
+  "consent": {
+    "enabled": true,
+    "default_analytics_storage": "granted",
+    "default_ad_storage": "granted",
+    "default_ad_user_data": "granted",
+    "default_ad_personalization": "granted"
+  },
+  "ga4": {
+    "enabled": false,
+    "measurement_id": ""
+  },
+  "google_ads": {
+    "enabled": false,
+    "conversion_id": "",
+    "conversions": {
+      "whatsapp_click": {
+        "send_to": "",
+        "value": 1.0,
+        "currency": "EUR"
+      },
+      "phone_click": {
+        "send_to": "",
+        "value": 1.0,
+        "currency": "EUR"
+      },
+      "email_click": {
+        "send_to": "",
+        "value": 0.5,
+        "currency": "EUR"
+      },
+      "form_submit": {
+        "send_to": "",
+        "value": 3.0,
+        "currency": "EUR"
+      }
+    }
+  },
+  "meta_pixel": {
+    "enabled": false,
+    "pixel_id": "",
+    "events": {
+      "whatsapp_click": "Contact",
+      "phone_click": "Contact",
+      "email_click": "Contact",
+      "form_submit": "Lead"
+    }
+  },
+  "events": {
+    "whatsapp_click": {
+      "enabled": true,
+      "category": "lead",
+      "action": "whatsapp_click"
+    },
+    "phone_click": {
+      "enabled": true,
+      "category": "lead",
+      "action": "phone_click"
+    },
+    "email_click": {
+      "enabled": true,
+      "category": "lead",
+      "action": "email_click"
+    },
+    "form_submit": {
+      "enabled": true,
+      "category": "lead",
+      "action": "form_submit"
+    }
+  },
+  "debug": false
+}

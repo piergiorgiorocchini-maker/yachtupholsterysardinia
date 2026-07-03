@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Yacht Upholstery Sardinia">
+  <rect width="64" height="64" rx="14" fill="#071827"/>
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#c9a55a" stroke-width="3"/>
+  <circle cx="32" cy="32" r="16.5" fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="2"/>
+  <path d="M17.5 36.5 C23.5 29.5, 31 29.5, 37 36.5 C41 41, 47.5 40.5, 52 35.5" fill="none" stroke="#cce8e5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20 27.5 H44" fill="none" stroke="#cce8e5" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

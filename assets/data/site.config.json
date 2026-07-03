@@ -1,0 +1,43 @@
+{
+  "brand": "Yacht Upholstery Sardinia",
+  "subtitle": "by NuvolaCleaning",
+  "ownerName": "Piergiorgio Rocchini",
+  "businessLegalName": "Impresa La Nuvola Azzurra di Piergiorgio Rocchini",
+  "businessAddress": {
+    "streetAddress": "Via Enrico Fermi 1/a",
+    "postalCode": "09010",
+    "city": "Gonnesa",
+    "province": "SU",
+    "region": "Sardegna",
+    "country": "IT"
+  },
+  "phoneDisplay": "+39 351 655 0908",
+  "phoneHref": "+393516550908",
+  "whatsappNumber": "393516550908",
+  "whatsappUrl": "https://wa.me/393516550908?text=Hello%2C%20I%20would%20like%20a%20yacht%20interior%20textile%20care%20assessment%20in%20Sardinia.",
+  "whatsappDefaultText": "Hello, I would like a yacht interior textile care assessment in Sardinia.",
+  "email": "lanuvolazzurra@gmail.com",
+  "vatId": "03834620928",
+  "vatIdSchema": "IT03834620928",
+  "domain": "yachtupholsterysardinia.com",
+  "baseUrl": "https://yachtupholsterysardinia.com",
+  "region": "Sardinia",
+  "primaryService": "yacht upholstery, carpet and mattress cleaning in Sardinia",
+  "secondaryServices": [
+    "yacht upholstery cleaning",
+    "yacht carpet cleaning",
+    "yacht mattress cleaning",
+    "pre-charter yacht interior textile refresh",
+    "guest-ready yacht interior textile care"
+  ],
+  "experienceText": "specialist textile-care service for yacht interiors, premium villas and guest-ready properties in Sardinia",
+  "poweredByName": "RevenueCraftedStudio",
+  "poweredByUrl": "https://revenuecraftedstudio.com/",
+  "trackingConfigPath": "/assets/data/tracking.config.json",
+  "trackingScriptPath": "/assets/js/tracking.js",
+  "notes": {
+    "legalAddressVisibility": "Use businessLegalName and businessAddress only on legal pages unless explicitly required elsewhere.",
+    "canonicalPolicy": "Use canonical URLs with https://yachtupholsterysardinia.com.",
+    "contentRestrictions": "Do not promise flame retardant treatment, steam cleaning, or marine certifications unless these capabilities are formally confirmed."
+  }
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Yacht mattress placeholder">
+  <rect width="1200" height="800" fill="#071827"/>
+  <rect x="170" y="260" width="820" height="260" rx="44" fill="#fbf7ef"/>
+  <rect x="230" y="315" width="300" height="80" rx="28" fill="#cce8e5" opacity="0.75"/>
+  <rect x="570" y="315" width="300" height="80" rx="28" fill="#cce8e5" opacity="0.75"/>
+  <path d="M210 455 H950" stroke="#c9a55a" stroke-width="6" opacity="0.55"/>
+  <circle cx="965" cy="205" r="130" fill="none" stroke="#c9a55a" stroke-width="3" opacity="0.44"/>
+  <text x="170" y="650" fill="#fbf7ef" font-family="Arial, sans-serif" font-size="44" font-weight="700">Yacht Mattress</text>
+  <text x="170" y="704" fill="#cce8e5" font-family="Arial, sans-serif" font-size="26">Image placeholder</text>
+</svg>

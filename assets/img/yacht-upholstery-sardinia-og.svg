@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Yacht Upholstery Cleaning Sardinia">
+  <rect width="1200" height="630" fill="#071827"/>
+  <circle cx="970" cy="145" r="170" fill="none" stroke="#c9a55a" stroke-width="3" opacity="0.5"/>
+  <circle cx="970" cy="145" r="112" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.2"/>
+  <path d="M130 410 C250 300, 405 300, 525 410 C630 505, 800 500, 940 380" fill="none" stroke="#cce8e5" stroke-width="10" stroke-linecap="round"/>
+  <text x="110" y="190" fill="#fbf7ef" font-family="Georgia, serif" font-size="74" font-weight="500">Yacht Upholstery</text>
+  <text x="110" y="275" fill="#fbf7ef" font-family="Georgia, serif" font-size="74" font-weight="500">Cleaning Sardinia</text>
+  <text x="114" y="345" fill="#c9a55a" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="3">PORTO CERVO · OLBIA · PORTISCO · COSTA SMERALDA</text>
+  <text x="114" y="535" fill="#cce8e5" font-family="Arial, sans-serif" font-size="30">Specialist textile care for guest-ready yacht interiors</text>
+</svg>
