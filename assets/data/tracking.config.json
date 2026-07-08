@@ -11,8 +11,8 @@
     "default_ad_personalization": "granted"
   },
   "ga4": {
-    "enabled": false,
-    "measurement_id": ""
+    "enabled": true,
+    "measurement_id": "G-DE3D4QYTHH"
   },
   "google_ads": {
     "enabled": false,
