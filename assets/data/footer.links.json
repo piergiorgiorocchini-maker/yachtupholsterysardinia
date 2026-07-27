@@ -35,6 +35,10 @@
       "title": "Guides",
       "links": [
         {
+          "label": "View all guides",
+          "href": "/guides/"
+        },
+        {
           "label": "Pre-charter yacht interiors",
           "href": "/guides/pre-charter-yacht-interior-cleaning-sardinia.html"
         },
