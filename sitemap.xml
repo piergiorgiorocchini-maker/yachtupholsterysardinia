@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://yachtupholsterysardinia.com/</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://yachtupholsterysardinia.com/services/yacht-upholstery-cleaning-sardinia.html</loc>
-    <lastmod>2026-07-03</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://yachtupholsterysardinia.com/services/yacht-mattress-cleaning-sardinia.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
@@ -39,42 +39,12 @@
     <priority>0.85</priority>
   </url>
 
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-porto-cervo.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-costa-smeralda.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-olbia.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-portisco.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-porto-rotondo.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-cagliari.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-porto-cervo.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-costa-smeralda.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-olbia.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-portisco.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-porto-rotondo.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/locations/yacht-carpet-cleaning-cagliari.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
 
   <url><loc>https://yachtupholsterysardinia.com/locations/yacht-upholstery-cleaning-porto-cervo.html</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
   <url><loc>https://yachtupholsterysardinia.com/locations/yacht-upholstery-cleaning-costa-smeralda.html</loc><lastmod>2026-07-03</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
@@ -107,7 +77,7 @@
   </url>
   <url>
     <loc>https://yachtupholsterysardinia.com/guides/yacht-upholstery-cleaning-porto-cervo.html</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
@@ -118,7 +88,7 @@
     <priority>0.70</priority>
   </url>
 
-  <url><loc>https://yachtupholsterysardinia.com/pages/who-we-are.html</loc><lastmod>2026-06-29</lastmod><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://yachtupholsterysardinia.com/pages/who-we-are.html</loc><lastmod>2026-07-27</lastmod><changefreq>monthly</changefreq><priority>0.60</priority></url>
   <url><loc>https://yachtupholsterysardinia.com/pages/legal/contact.html</loc><lastmod>2026-06-29</lastmod><changefreq>yearly</changefreq><priority>0.40</priority></url>
   <url><loc>https://yachtupholsterysardinia.com/pages/legal/privacy.html</loc><lastmod>2026-06-29</lastmod><changefreq>yearly</changefreq><priority>0.20</priority></url>
   <url><loc>https://yachtupholsterysardinia.com/pages/legal/cookie-policy.html</loc><lastmod>2026-06-29</lastmod><changefreq>yearly</changefreq><priority>0.20</priority></url>
