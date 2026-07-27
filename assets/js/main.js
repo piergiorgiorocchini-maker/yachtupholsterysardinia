@@ -10,6 +10,7 @@
 
   const PRIMARY_WHATSAPP_URL = "https://wa.me/393516550908?text=Hello%2C%20I%20would%20like%20a%20personalised%20quote%20for%20yacht%20upholstery%2C%20carpet%20or%20mattress%20cleaning%20in%20Sardinia.%20I%20can%20send%20photos%2C%20location%20and%20timing.";
   const COSTA_SMERALDA_CARPET_WHATSAPP_URL = "https://wa.me/393516550908?text=Hello%2C%20I%20have%20reviewed%20the%20Costa%20Smeralda%20carpet%20care%20guide%20and%20would%20like%20an%20assessment.%20I%20can%20send%20photos%2C%20location%20and%20timing.";
+  const PHONE_URL = "tel:+393516550908";
 
   function setHeaderState() {
     const header = document.querySelector("[data-header]");
@@ -37,33 +38,147 @@
     link.classList.add("js-track-whatsapp");
     link.dataset.event = "whatsapp_click";
     link.dataset.label = label;
+    delete link.dataset.trackingBound;
 
     if (text) {
       link.textContent = text;
     }
   }
 
-  function setPrimaryWhatsAppCtas() {
-    const headerCtas = document.querySelectorAll(".header-cta");
+  function injectHeaderCtaStyles() {
+    if (document.getElementById("header-dual-cta-styles")) {
+      return;
+    }
 
-    headerCtas.forEach(function (link) {
+    const style = document.createElement("style");
+    style.id = "header-dual-cta-styles";
+    style.textContent = `
+      .header-actions {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.55rem;
+        flex: 0 0 auto;
+      }
+
+      .header-call-secondary {
+        display: inline-flex;
+        min-height: 42px;
+        align-items: center;
+        justify-content: center;
+        padding: 0.68rem 0.92rem;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 999px;
+        font-weight: 750;
+        line-height: 1;
+        text-decoration: none;
+      }
+
+      .header-call-secondary:hover {
+        background: rgba(255, 255, 255, 0.13);
+        border-color: rgba(255, 255, 255, 0.46);
+      }
+
+      .header-cta-mobile-label {
+        display: none;
+      }
+
+      @media (max-width: 680px) {
+        .header-actions {
+          gap: 0.35rem;
+        }
+
+        .header-cta,
+        .header-call-secondary {
+          min-height: 40px;
+          padding: 0.62rem 0.7rem;
+          font-size: 0.78rem;
+          white-space: nowrap;
+        }
+
+        .header-cta-desktop-label {
+          display: none;
+        }
+
+        .header-cta-mobile-label {
+          display: inline;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .brand-subtitle {
+          display: none;
+        }
+
+        .brand-name {
+          font-size: 0.82rem;
+        }
+      }
+    `;
+
+    document.head.appendChild(style);
+  }
+
+  function createSecondaryCallLink() {
+    const callLink = document.createElement("a");
+    callLink.className = "header-call-secondary js-track-phone";
+    callLink.href = PHONE_URL;
+    callLink.dataset.event = "phone_click";
+    callLink.dataset.label = "header_phone_secondary";
+    callLink.textContent = "Call";
+    return callLink;
+  }
+
+  function setHeaderDualCtas() {
+    injectHeaderCtaStyles();
+
+    const headerCtas = Array.from(document.querySelectorAll(".header-cta"));
+
+    headerCtas.forEach(function (originalLink) {
+      if (originalLink.closest(".header-actions")) {
+        return;
+      }
+
+      const whatsappLink = originalLink.cloneNode(true);
+      originalLink.replaceWith(whatsappLink);
+
       configureWhatsAppLink(
-        link,
+        whatsappLink,
         PRIMARY_WHATSAPP_URL,
-        "header_whatsapp",
-        "WhatsApp"
+        "header_whatsapp_assessment",
+        ""
       );
+
+      whatsappLink.setAttribute("aria-label", "Request a WhatsApp assessment");
+      whatsappLink.innerHTML = '<span class="header-cta-desktop-label">WhatsApp Assessment</span><span class="header-cta-mobile-label">WhatsApp</span>';
+
+      const actions = document.createElement("div");
+      actions.className = "header-actions";
+      whatsappLink.replaceWith(actions);
+      actions.appendChild(whatsappLink);
+      actions.appendChild(createSecondaryCallLink());
     });
 
     if (window.location.pathname === "/guides/yacht-carpet-cleaning-costa-smeralda.html") {
-      const guidePrimaryCta = document.querySelector(".hero-actions .btn-primary");
+      const originalGuideCta = document.querySelector(".hero-actions .btn-primary");
 
-      configureWhatsAppLink(
-        guidePrimaryCta,
-        COSTA_SMERALDA_CARPET_WHATSAPP_URL,
-        "costa_smeralda_carpet_guide_hero_whatsapp",
-        "Get free WhatsApp assessment"
-      );
+      if (originalGuideCta) {
+        const guidePrimaryCta = originalGuideCta.cloneNode(true);
+        originalGuideCta.replaceWith(guidePrimaryCta);
+
+        configureWhatsAppLink(
+          guidePrimaryCta,
+          COSTA_SMERALDA_CARPET_WHATSAPP_URL,
+          "costa_smeralda_carpet_guide_hero_whatsapp",
+          "Get free WhatsApp assessment"
+        );
+      }
+    }
+
+    if (window.YachtTracking && typeof window.YachtTracking.bind === "function") {
+      window.YachtTracking.bind(document);
     }
   }
 
@@ -121,7 +236,7 @@
   }
 
   function init() {
-    setPrimaryWhatsAppCtas();
+    setHeaderDualCtas();
     setHeaderState();
     setCurrentYear();
     closeOtherDetails();
