@@ -1,0 +1,101 @@
+name: One-off add Superyacht JOY image
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/one-off-add-joy-image.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update-page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install Pillow
+        run: python -m pip install --quiet pillow
+
+      - name: Download and optimise the JOY image
+        run: |
+          python - <<'PY'
+          from io import BytesIO
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from PIL import Image
+
+          source = "https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png"
+          request = Request(source, headers={"User-Agent": "Mozilla/5.0"})
+          with urlopen(request, timeout=60) as response:
+              payload = response.read()
+
+          image = Image.open(BytesIO(payload)).convert("RGB")
+          max_width = 1600
+          if image.width > max_width:
+              height = round(image.height * max_width / image.width)
+              image = image.resize((max_width, height), Image.Resampling.LANCZOS)
+
+          destination = Path("assets/img/superyacht-joy-sardinia.webp")
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          image.save(destination, "WEBP", quality=84, method=6)
+          print(f"Saved {destination} at {image.width}x{image.height}")
+          PY
+
+      - name: Insert image and update page metadata
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          page_path = Path("services/superyacht-carpet-upholstery-cleaning-sardinia.html")
+          page = page_path.read_text(encoding="utf-8")
+
+          old_block = '''          <p>Northern Sardinia work commonly centres on Porto Cervo, Costa Smeralda, Olbia, Portisco and Porto Rotondo. Cagliari provides the main reference for southern Sardinia. Other marinas and seasonal locations can be reviewed from the yacht position, project value and operational deadline.</p>
+
+          <h2 id="why-us">Why choose Yacht Upholstery Sardinia</h2>'''
+
+          new_block = '''          <p>Northern Sardinia work commonly centres on Porto Cervo, Costa Smeralda, Olbia, Portisco and Porto Rotondo. Cagliari provides the main reference for southern Sardinia. Other marinas and seasonal locations can be reviewed from the yacht position, project value and operational deadline.</p>
+
+          <p>Porto Cervo and the Costa Smeralda welcome some of the world’s most sophisticated yachts and superyachts. Interiors of this level require specialist care for fitted carpets, salon upholstery, loose cushions, upholstered panels and cabin mattresses. Each intervention must be planned around the yacht’s materials, access conditions, crew schedule and required turnaround time.</p>
+
+          <figure class="editorial-figure">
+            <img src="/assets/img/superyacht-joy-sardinia.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Superyacht JOY moored in a Sardinian marina" title="Superyacht JOY in Sardinia">
+            <figcaption>Superyacht JOY moored in Sardinia, where premium yacht interiors require specialist carpet, upholstery and mattress care.</figcaption>
+          </figure>
+
+          <h2 id="why-us">Why choose Yacht Upholstery Sardinia</h2>'''
+
+          if old_block not in page:
+              raise SystemExit("Expected insertion point was not found; page left unchanged.")
+
+          page = page.replace(old_block, new_block, 1)
+          page = page.replace('"dateModified":"2026-07-27"', '"dateModified":"2026-07-28"', 1)
+          page = page.replace('Updated <time datetime="2026-07-27">27 July 2026</time>', 'Updated <time datetime="2026-07-28">28 July 2026</time>', 1)
+          page = page.replace(
+              '"description":"Professional care for superyacht carpets, fitted moquette, upholstery, cushions and cabin mattresses across Sardinia.",',
+              '"description":"Professional care for superyacht carpets, fitted moquette, upholstery, cushions and cabin mattresses across Sardinia.",\n        "image":"https://yachtupholsterysardinia.com/assets/img/superyacht-joy-sardinia.webp",',
+              1,
+          )
+          page_path.write_text(page, encoding="utf-8")
+
+          sitemap_path = Path("sitemap.xml")
+          sitemap = sitemap_path.read_text(encoding="utf-8")
+          pattern = r'(<loc>https://yachtupholsterysardinia\.com/services/superyacht-carpet-upholstery-cleaning-sardinia\.html</loc><lastmod>)[^<]+(</lastmod>)'
+          sitemap, count = re.subn(pattern, r'\g<1>2026-07-28\g<2>', sitemap, count=1)
+          if count != 1:
+              raise SystemExit("Sitemap entry was not found; files left for inspection.")
+          sitemap_path.write_text(sitemap, encoding="utf-8")
+          PY
+
+      - name: Commit the page update
+        run: |
+          rm -f .github/workflows/one-off-add-joy-image.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add services/superyacht-carpet-upholstery-cleaning-sardinia.html assets/img/superyacht-joy-sardinia.webp sitemap.xml .github/workflows/one-off-add-joy-image.yml
+          git commit -m "Add Superyacht JOY image to specialist service page"
+          git push
