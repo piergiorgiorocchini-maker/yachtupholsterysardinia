@@ -1,5 +1,6 @@
 name: One-off add Superyacht JOY image
 
+# Triggered once to add the approved editorial image and then self-remove.
 on:
   push:
     branches:
