@@ -235,12 +235,73 @@
     });
   }
 
+  function injectJoyEditorialImage() {
+    if (window.location.pathname !== "/services/superyacht-carpet-upholstery-cleaning-sardinia.html") {
+      return;
+    }
+
+    if (document.getElementById("superyacht-joy-editorial")) {
+      return;
+    }
+
+    const whyUsHeading = document.getElementById("why-us");
+
+    if (!whyUsHeading || !whyUsHeading.parentNode) {
+      return;
+    }
+
+    const contextParagraph = document.createElement("p");
+    contextParagraph.textContent = "Porto Cervo and the Costa Smeralda welcome some of the world’s most sophisticated yachts and superyachts. Interiors of this level require specialist care for fitted carpets, salon upholstery, loose cushions, upholstered panels and cabin mattresses. Each intervention must be planned around the yacht’s materials, access conditions, crew schedule and required turnaround time.";
+
+    const figure = document.createElement("figure");
+    figure.id = "superyacht-joy-editorial";
+    figure.className = "editorial-figure";
+
+    const image = document.createElement("img");
+    image.src = "https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png?w=1600";
+    image.srcset = "https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png?w=800 800w, https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png?w=1200 1200w, https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png?w=1600 1600w";
+    image.sizes = "(max-width: 900px) calc(100vw - 40px), 760px";
+    image.width = 1600;
+    image.height = 900;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.alt = "Superyacht JOY moored in a Sardinian marina";
+    image.title = "Superyacht JOY in Sardinia";
+
+    const caption = document.createElement("figcaption");
+    caption.textContent = "Superyacht JOY moored in Sardinia, where premium yacht interiors require specialist carpet, upholstery and mattress care.";
+
+    figure.appendChild(image);
+    figure.appendChild(caption);
+
+    whyUsHeading.parentNode.insertBefore(contextParagraph, whyUsHeading);
+    whyUsHeading.parentNode.insertBefore(figure, whyUsHeading);
+
+    const imageSchema = document.createElement("script");
+    imageSchema.type = "application/ld+json";
+    imageSchema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "@id": "https://yachtupholsterysardinia.com/services/superyacht-carpet-upholstery-cleaning-sardinia.html#superyacht-joy-image",
+      "contentUrl": "https://impresapuliziecagliari.wordpress.com/wp-content/uploads/2026/07/superyacht-joy.png?w=1600",
+      "name": "Superyacht JOY in Sardinia",
+      "caption": "Superyacht JOY moored in a Sardinian marina.",
+      "description": "Editorial image of Superyacht JOY in Sardinia, illustrating the presentation standards associated with premium yacht and superyacht interiors.",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Sardinia, Italy"
+      }
+    });
+    document.head.appendChild(imageSchema);
+  }
+
   function init() {
     setHeaderDualCtas();
     setHeaderState();
     setCurrentYear();
     closeOtherDetails();
     improveAnchorScroll();
+    injectJoyEditorialImage();
 
     window.addEventListener("scroll", setHeaderState, { passive: true });
   }
