@@ -75,3 +75,9 @@
   .payment-note{flex-basis:100%}
   .footer-bottom{flex-direction:column;gap:.35rem}
 }
+.trustpilot-mini {
+  display: block;
+  width: 82px;
+  height: auto;
+  margin-top: 3px;
+}
