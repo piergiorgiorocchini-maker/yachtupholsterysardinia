@@ -1,3 +1,9 @@
+.header-wa{order:1}
+.header-call{order:2;min-height:36px;padding:.45rem .72rem;font-size:.8rem;font-weight:750;color:rgba(7,24,39,.78);background:transparent;border-color:rgba(7,24,39,.16)}
+.intro{padding:clamp(3.5rem,6vw,5.5rem) 0}
+.intro-grid{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(2.5rem,5vw,5rem)}
+.intro h2{max-width:560px;font-size:clamp(2.25rem,3.25vw,3.35rem);line-height:1.04}
+
 .proof-heading{max-width:860px}
 .proof-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.55fr);gap:clamp(1.25rem,4vw,3rem);align-items:stretch}
 .proof-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
@@ -29,12 +35,17 @@
 .payment-note{color:rgba(255,255,255,.52);font-size:.78rem}
 .footer-bottom{display:flex;justify-content:space-between;gap:1.5rem;padding-top:1.15rem;color:rgba(255,255,255,.42);font-size:.72rem}
 @media(max-width:980px){
+  .intro-grid{grid-template-columns:1fr}
+  .intro h2{max-width:760px}
   .proof-layout{grid-template-columns:1fr}
   .owner-card{min-height:auto}
   .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer-brand-block{grid-column:1/-1}
 }
 @media(max-width:720px){
+  .header-wa{order:1}
+  .header-call{order:2}
+  .intro h2{font-size:clamp(2.15rem,10vw,3.1rem)}
   .proof-gallery,.faq-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .footer-brand-block{grid-column:auto}
