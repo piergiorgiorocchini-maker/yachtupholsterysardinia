@@ -3,6 +3,10 @@
 .payment-note{flex-basis:100%;text-align:center}
 .payment-mark{margin-inline:.12rem}
 
+.direct-contact img,.owner-card img{content:url('/assets/img/yacht-ads-north/mr-rocchini-real.webp');object-fit:cover}
+.proof-photo:first-child img{content:url('/assets/img/yacht-ads-north/yacht-carpet-real.webp');object-fit:cover}
+.proof-photo:nth-child(2) img{content:url('/assets/img/yacht-ads-north/yacht-interior-real.webp');object-fit:cover}
+
 @media(min-width:981px){
   .hero-grid{grid-template-columns:minmax(0,.96fr) minmax(380px,.84fr);gap:clamp(2rem,4.2vw,4.5rem);padding:clamp(3.7rem,6.5vw,6rem) 0}
   h1{font-size:clamp(3rem,5.35vw,5.25rem);line-height:1.01}
