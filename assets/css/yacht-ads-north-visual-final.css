@@ -3,7 +3,7 @@
 .payment-note{flex-basis:100%;text-align:center}
 .payment-mark{margin-inline:.12rem}
 
-.direct-contact img,.owner-card img{content:url('/assets/img/yacht-ads-north/mr-rocchini-real.webp');object-fit:cover}
+.direct-contact img,.owner-card img{content:url('/assets/img/yacht-ads-north/Mr.Rocchini.webp');object-fit:cover}
 .proof-photo:first-child img{content:url('/assets/img/yacht-ads-north/yacht-carpet-real.webp');object-fit:cover}
 .proof-photo:nth-child(2) img{content:url('/assets/img/yacht-ads-north/yacht-interior-real.webp');object-fit:cover}
 
