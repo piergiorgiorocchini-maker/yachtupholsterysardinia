@@ -13,8 +13,18 @@
 .proof-photo figcaption strong{color:var(--navy);font-size:1rem}
 .proof-photo figcaption span{color:var(--muted);font-size:.87rem;line-height:1.5}
 .owner-card{display:flex;min-height:100%;flex-direction:column;justify-content:center}
+
+.areas{padding:clamp(3.6rem,5vw,5rem) 0 clamp(2.8rem,4vw,3.8rem)}
+.areas .section-head{max-width:760px;margin-bottom:1.55rem}
+.areas .section-head h2{font-size:clamp(2.35rem,3.75vw,3.8rem);line-height:1.02}
+.area-chips{margin-top:1.1rem}
+.area-note{margin-top:1rem}
+.faq{padding:clamp(3.4rem,5vw,4.8rem) 0 clamp(4rem,6vw,6rem)}
+.faq .section-head{margin-bottom:1.8rem}
+.faq .section-head h2{font-size:clamp(2.35rem,3.8vw,3.9rem);line-height:1.03}
 .faq-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:1120px;align-items:start}
 .faq details{align-self:start}
+
 .landing-footer{padding:clamp(3rem,6vw,5rem) 0 1.2rem;color:rgba(255,255,255,.72);background:#020c14;border-top:1px solid rgba(255,255,255,.08)}
 .footer-grid{display:grid;grid-template-columns:minmax(260px,1.3fr) repeat(3,minmax(155px,.7fr));gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
 .footer-brand{display:flex;align-items:center;gap:.72rem;text-decoration:none}
@@ -39,6 +49,7 @@
   .intro h2{max-width:760px}
   .proof-layout{grid-template-columns:1fr}
   .owner-card{min-height:auto}
+  .areas .section-head h2,.faq .section-head h2{font-size:clamp(2.3rem,6vw,3.4rem)}
   .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .footer-brand-block{grid-column:1/-1}
 }
@@ -46,6 +57,9 @@
   .header-wa{order:1}
   .header-call{order:2}
   .intro h2{font-size:clamp(2.15rem,10vw,3.1rem)}
+  .areas{padding:3.2rem 0 2.5rem}
+  .faq{padding:3rem 0 4rem}
+  .areas .section-head h2,.faq .section-head h2{font-size:clamp(2.15rem,9.5vw,3rem)}
   .proof-gallery,.faq-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
   .footer-brand-block{grid-column:auto}
