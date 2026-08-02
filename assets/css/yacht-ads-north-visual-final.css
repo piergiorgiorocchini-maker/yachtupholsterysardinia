@@ -8,11 +8,12 @@
 .proof-photo:nth-child(2) img{content:url('/assets/img/yacht-ads-north/yacht-interior-real.webp');object-fit:cover}
 
 @media(min-width:981px){
-  .hero-grid{grid-template-columns:minmax(0,.96fr) minmax(380px,.84fr);gap:clamp(2rem,4.2vw,4.5rem);padding:clamp(3.7rem,6.5vw,6rem) 0}
-  h1{font-size:clamp(3rem,5.35vw,5.25rem);line-height:1.01}
-  .hero-visual{min-height:520px}
-  .hero-visual>img{height:520px}
-  .hero-card{left:-34px}
+  .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(380px,.82fr);gap:clamp(2rem,3.6vw,4rem);padding:clamp(3.2rem,5.4vw,5rem) 0}
+  h1{max-width:760px;font-size:clamp(2.85rem,4.7vw,4.7rem);line-height:1.01}
+  .hero-visual{min-height:500px;align-self:start;margin-top:1rem}
+  .hero-visual>img{height:500px}
+  .hero-card{left:-26px;bottom:24px;max-width:330px;padding:1.1rem 1.25rem}
+  .hero-card ul{gap:.42rem}
 }
 
 @media(max-width:720px){
