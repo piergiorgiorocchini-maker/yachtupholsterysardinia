@@ -3,17 +3,12 @@
 .payment-note{flex-basis:100%;text-align:center}
 .payment-mark{margin-inline:.12rem}
 
-.direct-contact img,.owner-card img{content:url('/assets/img/yacht-ads-north/Mr.Rocchini.webp');object-fit:cover}
-.proof-photo:first-child img{content:url('/assets/img/yacht-ads-north/yacht-carpet-real.webp');object-fit:cover}
-.proof-photo:nth-child(2) img{content:url('/assets/img/yacht-ads-north/yacht-interior-real.webp');object-fit:cover}
-
 @media(min-width:981px){
-  .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(380px,.82fr);gap:clamp(2rem,3.6vw,4rem);padding:clamp(3.2rem,5.4vw,5rem) 0}
-  h1{max-width:760px;font-size:clamp(2.85rem,4.7vw,4.7rem);line-height:1.01}
-  .hero-visual{min-height:500px;align-self:start;margin-top:1rem}
-  .hero-visual>img{height:500px}
-  .hero-card{left:-26px;bottom:24px;max-width:330px;padding:1.1rem 1.25rem}
-  .hero-card ul{gap:.42rem}
+  .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(360px,.78fr);gap:clamp(1.8rem,3.5vw,3.8rem);padding:clamp(3.2rem,5.5vw,5rem) 0}
+  h1{font-size:clamp(2.8rem,4.7vw,4.7rem);line-height:1.01}
+  .hero-visual{min-height:480px;align-self:center}
+  .hero-visual>img{height:480px}
+  .hero-card{left:-26px;max-width:330px;padding:1rem 1.1rem}
 }
 
 @media(max-width:720px){
