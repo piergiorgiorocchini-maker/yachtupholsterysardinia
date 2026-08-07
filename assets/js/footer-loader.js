@@ -140,6 +140,7 @@
 
           <div class="footer-column">
             <h3>Services</h3>
+            <a href="/pulizia-moquette-tappezzeria-yacht-sardegna/">Pulizia moquette e tappezzeria yacht</a>
             <a href="/services/yacht-upholstery-cleaning-sardinia.html">Yacht upholstery cleaning</a>
             <a href="/services/yacht-carpet-cleaning-sardinia.html">Yacht carpet cleaning</a>
             <a href="/services/yacht-mattress-cleaning-sardinia.html">Yacht mattress cleaning</a>
