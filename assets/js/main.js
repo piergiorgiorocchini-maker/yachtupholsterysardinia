@@ -295,10 +295,141 @@
     document.head.appendChild(imageSchema);
   }
 
+  function refineItalianYachtPillar() {
+    const paths = [
+      "/pulizia-moquette-tappezzeria-yacht-sardegna.html",
+      "/pulizia-moquette-tappezzeria-yacht-sardegna/"
+    ];
+
+    if (!paths.includes(window.location.pathname)) {
+      return;
+    }
+
+    const style = document.createElement("style");
+    style.id = "italian-pillar-live-refine";
+    style.textContent = `
+      .it-page .review-wrap {
+        max-width: 680px;
+        margin: 2.4rem auto;
+      }
+
+      .it-page .review-card {
+        text-align: center;
+        padding: clamp(1.7rem, 4vw, 2.5rem);
+      }
+
+      .it-page .review-avatar {
+        display: grid;
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 0.85rem;
+        place-items: center;
+        overflow: hidden;
+        color: #ffffff;
+        background: #12314d;
+        border: 3px solid #d9b66a;
+        border-radius: 50%;
+      }
+
+      .it-page .review-avatar svg {
+        width: 42px;
+        height: 42px;
+        opacity: 0.92;
+      }
+
+      .it-page .review-stars {
+        margin-bottom: 0.9rem;
+      }
+
+      .it-page .review-quote {
+        max-width: 560px;
+        margin: 0 auto;
+        font-size: clamp(1.08rem, 2vw, 1.28rem);
+        line-height: 1.6;
+      }
+
+      .it-page .review-attribution {
+        margin-top: 1.15rem;
+        text-align: center;
+      }
+
+      .it-page .specialist-photo {
+        width: 150px !important;
+        height: 150px !important;
+        aspect-ratio: 1 / 1 !important;
+        object-fit: cover !important;
+        object-position: center 38% !important;
+        border-radius: 50% !important;
+      }
+
+      @media (max-width: 700px) {
+        .it-page .specialist-photo {
+          width: 120px !important;
+          height: 120px !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    document.querySelectorAll('a[href="#specialista-o-generico"]').forEach(function (link) {
+      const item = link.closest("li");
+      if (item) {
+        item.remove();
+      }
+    });
+
+    const specialistSectionHeading = document.getElementById("specialista-o-generico");
+    if (specialistSectionHeading) {
+      let node = specialistSectionHeading;
+      while (node && !(node.nodeType === 1 && node.id === "moquette-carpet")) {
+        const next = node.nextSibling;
+        node.remove();
+        node = next;
+      }
+    }
+
+    document.querySelectorAll('a[href="#preventivo"]').forEach(function (link) {
+      link.textContent = "Come richiedere una stima";
+    });
+
+    const estimateHeading = document.getElementById("preventivo");
+    if (estimateHeading) {
+      estimateHeading.textContent = "Come richiedere una stima";
+    }
+
+    const reviewHeading = document.getElementById("recensione");
+    if (reviewHeading) {
+      reviewHeading.remove();
+    }
+
+    const reviewWrap = document.querySelector(".review-wrap");
+    if (reviewWrap) {
+      reviewWrap.innerHTML = `
+        <div class="review-card">
+          <div class="review-avatar" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="24" r="12" fill="currentColor"/>
+              <path d="M12 56c2.8-12 10.5-18 20-18s17.2 6 20 18" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="review-stars" aria-label="5 stelle">★★★★★</div>
+          <blockquote class="review-quote">“I cuscini sono venuti benissimo. Passerò i tuoi contatti ad altre imbarcazioni presenti in zona.”</blockquote>
+          <div class="review-attribution">Chris <span>Chief Steward</span></div>
+        </div>
+      `;
+
+      const note = reviewWrap.nextElementSibling;
+      if (note && note.classList.contains("micro-note")) {
+        note.remove();
+      }
+    }
+  }
+
   function init() {
     setHeaderDualCtas();
     setHeaderState();
     setCurrentYear();
+    refineItalianYachtPillar();
     closeOtherDetails();
     improveAnchorScroll();
     injectJoyEditorialImage();
